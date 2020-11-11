@@ -22,19 +22,19 @@ training model:
   - path: assets/features
     md5: 7e2ca9dcb3cb548e1c47c8b6b784c34c.dir
   - path: produce/train_model.py
-    md5: 85c06d65b3e25309caef48237abdf1ef
+    md5: 9ae804d96f01de0c2701aa5a41a96f32
   outs:
   - path: assets/models
-    md5: 07b98944d19f00fe41ad8ea0e1fef305.dir
+    md5: 760d1dbc0d782a9e2096ce083119ec45.dir
 performane evaluation:
   cmd: python produce/evaluate_model.py
   deps:
   - path: assets/features
     md5: 7e2ca9dcb3cb548e1c47c8b6b784c34c.dir
   - path: assets/models
-    md5: 07b98944d19f00fe41ad8ea0e1fef305.dir
+    md5: 760d1dbc0d782a9e2096ce083119ec45.dir
   - path: produce/evaluate_model.py
     md5: 2c83dc4c95548be20aed5d9853e30314
   outs:
   - path: assets/metrics.json
-    md5: eb9d617dfd80ff48a6277bba6ed72df0
+    md5: 47df627733b6f41173b8ed7e71eaec70
