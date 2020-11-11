@@ -1,0 +1,30 @@
+stages:
+  data extraction:
+    cmd: python produce/create_dataset.py
+    deps:
+    - produce/create_dataset.py
+    outs:
+    - assets/data
+  feature extraction:
+    cmd: python produce/extract_features.py
+    deps:
+    - assets/data
+    - produce/extract_features.py
+    outs:
+    - assets/features
+  training model:
+    cmd: python produce/train_model.py
+    deps:
+    - assets/features
+    - produce/train_model.py
+    outs:
+    - assets/models
+  performane evaluation:
+    cmd: python produce/evaluate_model.py
+    deps:
+    - assets/features
+    - assets/models
+    - produce/evaluate_model.py
+    metrics:
+    - assets/metrics.json:
+        cache: false

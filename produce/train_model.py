@@ -1,7 +1,8 @@
 import pickle
 import pandas as pd
 
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, ElasticNet
+from sklearn.ensemble import RandomForestRegressor
 from config import Config
 
 # Creating a path to save the models
