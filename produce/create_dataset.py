@@ -21,7 +21,8 @@ gdown.download(
 df = pd.read_csv(str(Config.original_data_path), encoding='latin1')
 
 # Split data into training and testing sets
-df_train, df_test = train_test_split(df, test_size=0.2, random_state=random_state)
+df_train, df_test = train_test_split(df, test_size=0.2,
+                                     random_state=random_state)
 
 # Saving our training and testing data into our directory
 df_train.to_csv(str(Config.dataset_path / 'train.csv'), index=None)

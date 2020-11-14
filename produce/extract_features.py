@@ -12,8 +12,8 @@ test_df = pd.read_csv(str(Config.dataset_path / 'test.csv'))
 
 
 def feature_extraction(df):
-    x = df[['Area harvested','Yield','Years']]
-    scaler=StandardScaler()
+    x = df[['Area harvested', 'Yield', 'Years']]
+    scaler = StandardScaler()
     x = scaler.fit_transform(x)
     return x
 
@@ -22,8 +22,15 @@ train_features = feature_extraction(train_df)
 test_features = feature_extraction(test_df)
 
 # Saving the features extracted from above to our directory
-pd.DataFrame(train_features).to_csv(str(Config.features_path / 'train_features.csv'), index=None)
-pd.DataFrame(test_features).to_csv(str(Config.features_path / 'test_features.csv'), index=None)
+pd.DataFrame(train_features).to_csv(
+    str(Config.features_path / 'train_features.csv'), index=None
+    )
+pd.DataFrame(test_features).to_csv(
+    str(Config.features_path / 'test_features.csv'), index=None
+    )
+
+# Preprocessing the features extracted
+
 
 def preprocess(df):
     x = df['Production'].values.reshape(-1, 1)
@@ -34,6 +41,11 @@ def preprocess(df):
 train_target = preprocess(train_df)
 test_target = preprocess(test_df)
 
-# saving to a dataframe
-pd.DataFrame(train_target).to_csv(str(Config.features_path / 'train_target.csv'), index=None)
-pd.DataFrame(test_target).to_csv(str(Config.features_path / 'test_target.csv'), index=None)
+
+# Saving our target to a dataframe
+pd.DataFrame(train_target).to_csv(
+    str(Config.features_path / 'train_target.csv'), index=None
+    )
+pd.DataFrame(test_target).to_csv(
+    str(Config.features_path / 'test_target.csv'), index=None
+    )

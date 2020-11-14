@@ -20,5 +20,5 @@ r_squared = r2_score(y_test, y_pred)
 rmse = math.sqrt(mean_squared_error(y_test, y_pred))
 
 # Saving the metrics in a json file
-with open(str(Config.metrics_file_path),'w') as outfile:
+with open(str(Config.metrics_file_path), 'w') as outfile:
     json.dump(dict(r_squared=r_squared, rmse=rmse), outfile)
