@@ -12,29 +12,29 @@ feature extraction:
   - path: assets/data
     md5: bc793bfdcd19bad30fd1140a5cd549bd.dir
   - path: produce/extract_features.py
-    md5: b359597a25e3e65eed03cd12b2db1714
+    md5: 67864cbab2cdfd80c9e7b060e2f04270
   outs:
   - path: assets/features
-    md5: c6e7e4cafd24816cbf18d254c186bfb9.dir
+    md5: acc7481fb07684c03778583bf02a89d8.dir
 training model:
   cmd: python produce/train_model.py
   deps:
   - path: assets/features
-    md5: c6e7e4cafd24816cbf18d254c186bfb9.dir
+    md5: acc7481fb07684c03778583bf02a89d8.dir
   - path: produce/train_model.py
-    md5: 6098d63b81471d0576ba8030d1e3662e
+    md5: b910f490d426f4a0862e6e30ae20db41
   outs:
   - path: assets/models
-    md5: 7b7a5bd63a15f7a88006bb1ab02d099a.dir
+    md5: 0d67ac0ade523ab6f66bb15ad7c70236.dir
 performane evaluation:
   cmd: python produce/evaluate_model.py
   deps:
   - path: assets/features
-    md5: c6e7e4cafd24816cbf18d254c186bfb9.dir
+    md5: acc7481fb07684c03778583bf02a89d8.dir
   - path: assets/models
-    md5: 7b7a5bd63a15f7a88006bb1ab02d099a.dir
+    md5: 0d67ac0ade523ab6f66bb15ad7c70236.dir
   - path: produce/evaluate_model.py
     md5: 2c83dc4c95548be20aed5d9853e30314
   outs:
   - path: assets/metrics.json
-    md5: e20fa4cfcd0ad4759abb55a83776e3c0
+    md5: a3031b467e1ba48dd09fcf4429183803
