@@ -1,5 +1,6 @@
 from pathlib import Path
 
+
 class Config:
     random_state = 42
     assets_path = Path('./assets')
