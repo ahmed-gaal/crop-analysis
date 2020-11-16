@@ -12,7 +12,7 @@ x_train = pd.read_csv(str(Config.features_path / 'train_features.csv'))
 y_train = pd.read_csv(str(Config.features_path / 'train_target.csv'))
 
 # Instantiating and fitting the data with the algorithm
-model = RandomForestRegressor(n_estimators=500, criterion='mse',
+model = RandomForestRegressor(n_estimators=900, criterion='mse',
                               n_jobs=1, random_state=Config.random_state)
 model = model.fit(x_train, y_train.to_numpy().ravel())
 
