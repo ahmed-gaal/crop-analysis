@@ -12,7 +12,7 @@ test_df = pd.read_csv(str(Config.dataset_path / 'test.csv'))
 
 
 def feature_extraction(df):
-    x = df[['Area harvested', 'Years']]
+    x = df[['Area harvested', 'Yield']]
     scaler = StandardScaler()
     x = scaler.fit_transform(x)
     return x
