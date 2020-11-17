@@ -8,11 +8,11 @@ Config.features_path.mkdir(parents=True, exist_ok=True)
 train_df = pd.read_csv(str(Config.dataset_path / 'train.csv'))
 test_df = pd.read_csv(str(Config.dataset_path / 'test.csv'))
 
-# Creating a function to extract features
+# Creating a function to extract and preprocess features
 
 
 def feature_extraction(df):
-    x = df[['Area harvested', 'Yield', 'Years']]
+    x = df[['Area harvested', 'Years']]
     scaler = StandardScaler()
     x = scaler.fit_transform(x)
     return x
@@ -29,7 +29,7 @@ pd.DataFrame(test_features).to_csv(
     str(Config.features_path / 'test_features.csv'), index=None
     )
 
-# Preprocessing the features extracted
+# Preprocessing the target extracted
 
 
 def preprocess(df):
