@@ -1,0 +1,96 @@
+LinearSVR-experiment:
+	assets/metrics.json:
+		r_squared: 0.9792180182565977
+		rmse: 0.1441595704190404
+Support Vector Regression-experiment:
+	assets/metrics.json:
+		r_squared: 0.976661475356925
+		rmse: 0.152769514770045
+adaboost-experiment:
+	assets/metrics.json:
+		r_squared: 0.8634469140050377
+		rmse: 3840.317867659648
+adaboost3-experiment:
+	assets/metrics.json:
+		r_squared: 0.8788173797037901
+		rmse: 0.3481129418683107
+adaboost4_1000-experiment:
+	assets/metrics.json:
+		r_squared: 0.8968716139295024
+		rmse: 0.3211360865279665
+adaboost_1000-experiment:
+	assets/metrics.json:
+		r_squared: 0.8800290134706861
+		rmse: 0.3463682816444281
+adaboost_SVR_1000-experiment:
+	assets/metrics.json:
+		r_squared: 0.9833402010427875
+		rmse: 0.12907284360860913
+adaboost_gradient_boosting-experiment:
+	assets/metrics.json:
+		r_squared: 0.9384190209944182
+		rmse: 0.24815515107605926
+adaboost_lr_500-experiment:
+	assets/metrics.json:
+		r_squared: 0.9806017163710794
+		rmse: 0.1392777212224576
+adaboost_ridge_1000-experiment:
+	assets/metrics.json:
+		r_squared: 0.9850174434862038
+		rmse: 0.12240325368958206
+decision_tree-experiment:
+	assets/metrics.json:
+		r_squared: 0.7947854532425161
+		rmse: 4707.826884447101
+decision_tree_4-experiment:
+	assets/metrics.json:
+		r_squared: 0.8389021002213394
+		rmse: 4171.203253454889
+gradient_boosting-experiment:
+	assets/metrics.json:
+		r_squared: 0.9263287073575053
+		rmse: 0.271424561605052
+lr-experiment:
+	assets/metrics.json:
+		r_squared: 0.9783956602121036
+		rmse: 1527.5200268024423
+lr_preprocessed-experiment:
+	assets/metrics.json:
+		r_squared: 0.9804634882947577
+		rmse: 0.1397730721750162
+random_forest-experiment:
+	assets/metrics.json:
+		r_squared: 0.8629758761050363
+		rmse: 3846.9357260598986
+random_forest_1000:
+	assets/metrics.json:
+		r_squared: 0.8545073386087756
+		rmse: 0.38143500283957216
+random_forest_500-experiment:
+	assets/metrics.json:
+		r_squared: 0.862047239775911
+		rmse: 0.3714199243768285
+random_forest_900-experiment:
+	assets/metrics.json:
+		r_squared: 0.8572434807002469
+		rmse: 0.37783133710658934
+ridge-experiment:
+	assets/metrics.json:
+		r_squared: 0.9795513611537876
+		rmse: 0.14299873721894343
+tree3_preprocessed-experiment:
+	assets/metrics.json:
+		r_squared: 0.7749322552146666
+		rmse: 0.47441305292469915
+tree4_preprocessed-experiment:
+	assets/metrics.json:
+		r_squared: 0.8185965687163156
+		rmse: 0.42591481693372024
+tree_3_no_years-experiment:
+	assets/metrics.json:
+		r_squared: 0.7749322552146666
+		rmse: 0.47441305292469915
+tree_3_no_yield-experiment:
+	assets/metrics.json:
+		r_squared: 0.6329387312189427
+		rmse: 0.6058558151747471
